@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <h1>Stopwatch Timer</h1>
+
+        <section id="controls">
+
+            <!-- input for minutes -->
+            <div class="input-group">
+                <label for="minutes-input">Minutes:</label>
+                <input type="number" placeholder="0" id="minutes-input" max="300" min="0" onchange="getMinutesValue();" value="0">
+            </div>
+
+            <!-- input for seconds -->
+            <div class="input-group">
+                <label for="seconds-input">Seconds:</label>
+                <input type="number" placeholder="0" id="seconds-input" max="60" min="0" step="5" onchange="getSecondsValue();" value="0">
+            </div>
+
+            <button id="start-button" onclick="startTimer();">Start</button>
+            <button id="stop-button" onclick="stopTimer();" disabled>Stop</button>
+            <button id="pause-button" onclick="pauseTimer();" disabled>Pause</button>
+
+        </section>
+
+        <h2>
+            <span id="minutes">0</span>: <span id="seconds">00</span>
+        </h2>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
